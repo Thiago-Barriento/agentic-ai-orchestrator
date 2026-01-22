@@ -1,9 +1,11 @@
 class Memory:
     def __init__(self):
-        self.events = []
+        self.logs = []
 
-    def add(self, event: str):
-        self.events.append(event)
+    def add(self, entry):
+        self.logs.append(entry)
 
-    def get_all(self):
-        return self.events
+    def show(self):
+        print("\n[MEMORY]")
+        for log in self.logs:
+            print("-", log)
